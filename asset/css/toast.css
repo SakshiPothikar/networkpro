@@ -1,0 +1,37 @@
+* {
+    background: rgb(3, 40, 40);
+}
+
+.toast-container {
+    /* background-color: red; */
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.toastify {
+    width: 400px;
+    color: white;
+    position: relative;
+}
+
+
+.toastify::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: red;
+    height: 10px;
+    width: 100%;
+    animation: rev 5s;
+}
+
+@keyframes rev {
+    100% {
+        width: 0%;
+    }
+}
